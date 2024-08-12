@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div id="container">
+        <form action="" id="change-pass-content">
+            <h3 class="change-pass-title">Alterar Senha</h3>
+            <div class="form-control">
+                <label for="change-pass" class="lblPass labelPass">Senha Actual</label>
+                <input type="password" name="change-pass" id="change-pass" class="input-pass">
+                <i class="bi bi-eye btn-see-pass btn-see-pass-1"></i>
+                <div class="message-error message-error-pass">Senha inválida</div>
+            </div>
+            <div class="form-control">
+                <label for="new-pass" class="lblPass labelNewPass">Nova Senha</label>
+                <input type="password" name="new-pass" id="new-pass" class="input-pass">
+                <i class="bi bi-eye btn-see-pass"></i>
+                <div class="message-error">Senha incorrecta</div>
+            </div>
+            <div class="form-control">
+                <label for="new-pass-confirm" class="lblPass">Repetir Nova Senha</label>
+                <input type="password" name="new-pass-confirm" id="new-pass-confirm" class="input-pass error-input">
+                <i class="bi bi-eye btn-see-pass"></i>
+                <div class="message-error">Senha incorrecta</div>
+            </div>
+            <div class="form-control btn-change-button">
+                <button type="button" class="btn-change-pass btn-change-save">Salvar</button>
+                <button type="button" class="btn-change-pass btn-change-cancel">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
