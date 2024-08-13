@@ -78,6 +78,15 @@ function validPass(element, label, btnSeePass, errorMsg) {
     });
 }
 
+// Limpar campos
+function clean (element, label, btnSeePass, errorMsg){
+    removeClass(element, 'error-input');
+    removeClass(label, 'errorLbl');
+    removeClass(btnSeePass, 'errorBtn');
+    removeClass(errorMsg, 'show');
+    element.value = '';
+}
+
 // Aplicar validações
 validPass(changePass, labelPass, btnPass, errorMsgPass);
 validPass(newPass, labelNewPass, btnNewPass, errorMsgNewPass);
@@ -124,4 +133,8 @@ btnSave.addEventListener('click', () => {
 
 // Botão para fechar e cancel a alteração de senha
 
-btnCancel.addEventListener('')
+btnCancel.addEventListener('click', ()=> {
+    clean(changePass, labelPass, btnPass, errorMsgPass);
+    clean(newPass, labelNewPass, btnNewPass, errorMsgNewPass);
+    clean(newPassConfirm, labelNewPassConfirm, btnPassConfirm, errorMsgNewPassConfirm);
+});

@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+/* Variáveis de cores */
 :root {
     --error: #f00e52;
     --active: #0e9df0;
 }
 
+/* Estilização do container principal */
 #container {
     width: 100%;
     height: 100vh;
@@ -14,6 +16,7 @@
     background-color: #d7e7e7;
 }
 
+/* Reset básico de padding, margin, e bordas */
 * {
     padding: 0;
     margin: 0;
@@ -22,19 +25,21 @@
     border: 0;
 }
 
+/* Estilização do corpo da página */
 body {
     font-size: 16px;
     font-family: "Manrope", sans-serif;
 }
 
+/* Estilização do formulário de alteração de senha */
 #change-pass-content {
     background-color: #fff;
     width: 330px;
-    height: auto;
     padding: 1.5em;
     border-radius: 15px;
 }
 
+/* Título do formulário */
 .change-pass-title {
     text-align: center;
     font-size: 1.5em;
@@ -43,11 +48,13 @@ body {
     margin-bottom: 1.5em;
 }
 
-#change-pass-content .form-control  {
+/* Controles de formulário */
+#change-pass-content .form-control {
     position: relative;
     margin-bottom: 1.7em;
 }
 
+/* Mensagens de erro */
 #change-pass-content .form-control .message-error {
     color: var(--error);
     font-weight: 700;
@@ -60,6 +67,7 @@ body {
     display: flex;
 }
 
+/* Labels dos inputs */
 #change-pass-content .form-control label {
     font-size: 1.1em;
     font-weight: 700;
@@ -69,31 +77,25 @@ body {
     transition: all .1s ease;
 }
 
-
-#change-pass-content .form-control label.activeLbl {
+#change-pass-content .form-control label.activeLbl,
+#change-pass-content .form-control label.errorLbl {
     left: 0;
     top: -15px;
     font-size: .8em;
 }
 
 #change-pass-content .form-control label.errorLbl {
-    left: 0;
-    top: -15px;
-    font-size: .8em;
     color: var(--error);
 }
 
-#change-pass-content .form-control:nth-child(5) {
-    margin-bottom: 0em;
-}
-
+/* Estilização dos inputs */
 #change-pass-content .form-control input {
     width: 100%;
     padding: 1em 2em 1em 1em;
     border-radius: 4px;
     margin-top: .5em;
     margin-bottom: .2em;
-    border: 1px solid rgb(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
 }
 
 #change-pass-content .form-control input.active-input {
@@ -104,6 +106,7 @@ body {
     border: 1px solid var(--error);
 }
 
+/* Botões de ação */
 #change-pass-content .btn-change-button {
     display: flex;
     align-items: center;
@@ -123,11 +126,11 @@ body {
     margin-right: .5em;
 }
 
-
 #change-pass-content .btn-change-button button:nth-child(2) {
     margin-left: .5em;
 }
 
+/* Botões de visualização da senha */
 #change-pass-content .btn-see-pass {
     position: absolute;
     right: 10px;
